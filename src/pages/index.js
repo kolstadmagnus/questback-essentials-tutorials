@@ -14,7 +14,7 @@ const HomePage = ({ data, location }) => {
       <Helmet
         title={pageTitle}
         titleTemplate={pageTitle}
-      /> {/* override default SEO-titling scheme (remove "• Magnus Kolstad" from title) */}
+      /> {/* override default SEO-titling scheme (remove "• Questback Essentials" from title) */}
       <section className="article-list">
         <h1 itemProp="headline">{pageTitle}</h1>
         <ul>

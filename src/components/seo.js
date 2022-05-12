@@ -51,9 +51,9 @@ const Seo = ({ description, lang, meta, title }) => {
 }
 
 Seo.defaultProps = {
-  lang: `no`,
+  lang: `en`,
   meta: [],
-  description:  `Artikler og foto av Magnus R. Kolstad, journalistikkstudent på Universitetet i Stavanger.`,
+  description:  `Tutorials for Questback Essentials.`,
 }
 
 Seo.propTypes = {

@@ -18,10 +18,10 @@ ROOT
   --grid-border: #e2e2e2;
   --ff-main: "FiraGo", sans-serif;
   --ff-code: "Triplicate", monospace;
-  --smcp-forms: "c2sc" 1;
+  --smcp-forms: 'smcp';
   --top-ws: 4rem;
   --vw-constant: 88vw;
-  --rem-constant: 28rem;
+  --rem-constant: 30rem;
   --line-length: min(var(--vw-constant), var(--rem-constant));
   /* max 88% of the device's width or 26 rem; whichever kicks in first */
 }
@@ -31,6 +31,7 @@ html {
   padding: 0;
   height: 100%;
   font-family: var(--ff-main);
+  font-weight: 200;
   text-rendering: optimizeLegibility;
   font-feature-settings: "liga", "kern";
   -webkit-text-size-adjust: none;
@@ -92,7 +93,6 @@ body {
   margin-bottom: .6rem;
   color: var(--gray-6);
   font-family: var(--ff-main);
-  font-weight: 200;
 }
 
 .table-of-contents a {

@@ -73,7 +73,7 @@ module.exports = {
         path: `${__dirname}/posts/reports/`,
       }
     },
-    {
+    /* {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/posts/account-settings/`,
@@ -126,7 +126,7 @@ module.exports = {
       options: {
         path: `${__dirname}/posts/test-and-publish/`,
       }
-    },
+    }, */
     `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-plugin-sharp`,
