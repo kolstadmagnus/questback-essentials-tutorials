@@ -1,0 +1,269 @@
+.article {
+  width: var(--line-length);
+  margin: 0 auto;
+  counter-reset: subheading;
+}
+
+@media (min-width: 765px) {
+  .article {
+    margin: 0 auto;
+    max-width: var(--rem-constant);
+  }
+}
+
+/* MDX images */
+.article .gatsby-resp-image-wrapper {
+  margin-top: 2.4rem;
+  margin-bottom: 2.4rem;
+  box-shadow: 0 1px 1px 0 rgba(60,64,67,.18),0 1px 3px 1px rgba(60,64,67,.26);
+  -webkit-box-shadow: 0 1px 1px 0 rgba(60,64,67,.18),0 1px 3px 1px rgba(60,64,67,.26);
+}
+
+.article blockquote {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.article blockquote p {
+  margin-left: 1.6rem;
+  border-left: 1px solid #ccc;
+  padding-left: .8rem;
+}
+
+
+
+
+/* ===============
+BASIC BLOCK STYLES
+=============== */
+
+/* body text */
+.article p,
+.article li {
+  margin-top: 0;
+  margin-bottom: .9rem;
+  line-height: 1.42;
+  font-size: 1rem;
+  font-variant-numeric: proportional-nums;
+  font-weight: 200;
+}
+
+
+/* lists */
+
+.article ol,
+.article ul {
+  margin-top: 1.4rem;
+  margin-bottom: 1.4rem;
+  padding: 0;
+}
+
+.article ol {
+  counter-reset: foobar;
+}
+
+.article ol li {
+  margin-bottom: .8em;
+}
+
+.article ol li {
+  margin-left: 2.8rem;
+}
+
+.article ul li {
+  margin-left: 1.8rem;
+}
+
+.article ul li:before {
+  content: "•";
+  position: absolute;
+  margin-left: -1.8rem;
+  color: var(--gray-2);
+}
+
+.article ol li:before {
+  content: counter(foobar);
+  counter-increment: foobar;
+  position: absolute;
+  margin-left: -2.8rem;
+  margin-top: -.06rem;
+  font-family: "Concourse-index";
+  font-size: 115%;
+  font-style: normal;
+}
+
+
+.article .cross-reference {
+  font-style: italic;
+  font-size: 85% !important; 
+  margin-top: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+
+.article h2+.cross-reference {
+  margin-top: 0;
+}
+
+/* tutorials */
+
+.article .tutorial {
+  border-top: 1px solid #d0cfcf;
+  border-bottom: 1px solid #d0cfcf;
+  padding-top: .4rem;
+  padding-bottom: .4rem;
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+  background-color: #fdfdfd
+}
+
+.article .tutorial {
+  margin-top: 1.8rem;
+  margin-bottom: 1.8rem;
+}
+
+.article .tutorial h3 {
+  margin-top: .9rem;
+  margin-bottom: .7rem;
+}
+
+.article .tutorial p,
+.article .tutorial li {
+  margin-top: .6rem;
+  margin-bottom: .9rem;
+  line-height: 1.5;
+  font-size: 95%;
+  font-style: italic;
+}
+
+.article h2+.tutorial {
+  margin-top: 1.4rem;
+}
+
+
+/* =============
+CHARACTER STYLES
+============= */
+
+.article span.ui {
+  font-style: normal;
+}
+
+.article span.ui::before {
+  content: "‹";
+  margin-left: 0.1rem;
+  margin-right: 0.1rem;
+}
+
+.article span.ui::after {
+  content: "›";
+  margin-left: 0.1rem;
+  margin-right: 0.1rem;
+}
+
+.article hr {
+  border: none;
+  height: 1rem;
+}
+
+.article .heavily-emphasized {
+  font-size: 120%;
+  line-height: 1.3;
+  margin-top: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+
+.article a {
+  color: var(--link-text);
+}
+
+.article code {
+  font-size: 95%;
+  padding-left: .2em;
+  padding-right: .2em;
+}
+
+.article .small-caps {
+  font-variant: small-caps;
+  font-feature-settings: var(--smcp-forms);
+  text-transform: lowercase;
+  /* no first caps with small caps! */
+}
+
+.article .small-caps a,
+.article a.small-caps {
+  color: inherit;
+  padding-left: .05em;
+  padding-right: .05em;
+}
+
+.article sup {
+  font-size: 65%;
+  font-family: var(--ff-main);
+  letter-spacing: .05em;
+}
+
+
+/* =============
+headings & intro
+============= */
+
+.article .published-date {
+  margin-top: 0;
+  margin-bottom: .26rem;
+  font-size: 80%;
+  color: var(--gray-3);
+}
+
+
+/* intro */
+.article .lead {
+  margin-top: .8rem;
+  margin-bottom: 1.1rem;
+  font-size: 115%;
+}
+
+
+/* regular subheading */
+.article h2 {
+  padding-top: 1.6rem;
+  margin-top: .4rem;
+  margin-bottom: .8rem;
+  line-height: 1.36;
+  font-size: 120%;
+  font-weight: 600;
+}
+
+@media (min-width: 520px) {
+  .article h2 {
+    font-size: 140%;
+    padding-top: var(--top-ws);
+    margin-bottom: 1.2rem;
+  }
+}
+
+.article div+h2,
+.article ol+h2,
+.article figure+h2,
+.article .cross-reference+h2 {
+  margin-top: 2rem;
+}
+
+.article h2::before {
+  counter-increment: subheading;
+  content: counter(subheading) "\00A0\00A0\00A0";
+}
+
+.article h2:target {
+  background: none;
+}
+
+.article h3 {
+  margin-top: 2rem;
+  margin-bottom: .6rem;
+  font-size: 100%;
+  font-weight: 600;
+  font-variant: small-caps;
+  text-transform: lowercase;
+  font-feature-settings: var(--smcp-forms);
+  letter-spacing: .06em;
+}

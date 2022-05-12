@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgatsby_starter_blog=self.webpackChunkgatsby_starter_blog||[]).push([[883],{9616:function(e,t,a){a.r(t);var l=a(7294),r=a(6217),n=a(6179);t.default=function(e){var t=e.location,a="Ikke funnet (404)";return l.createElement(r.Z,{location:t},l.createElement(n.Z,{title:a}),l.createElement("article",{className:"article"},l.createElement("h1",{itemprop:"headline"},a),l.createElement("p",{className:"lead"},"Beklager det.")))}}}]);
+//# sourceMappingURL=component---src-pages-404-js-5341bf334643775c7e06.js.map

@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-pages-reports-js",
+    "path": "/reports/",
+    "result": {"data":{"site":{"siteMetadata":{"title":"Questback Essentials tutorials"}},"allMdx":{"nodes":[{"excerpt":"Reports are not your actual data—that’s stored in the  Follow ‑ up tab . So if you feel like you’ve messed up the report—or if you…","fields":{"slug":"/reports/using-reports/"},"frontmatter":{"title":"Using reports"}}]}},"pageContext":{}},
+    "staticQueryHashes": ["3000541721"]}

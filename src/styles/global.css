@@ -1,0 +1,260 @@
+/* ==== 
+ROOT 
+==== */
+
+:root {
+  --gray-2: #222;
+  --gray-3: #333;
+  --gray-4: #444;
+  --gray-5: #555;
+  --gray-6: #666;
+  --gray-7: #777;
+  --gray-8: #888;
+  --gray-9: #999;
+  --blue-gray: #666871;
+  --light-gray: #818181;
+  --link-text: #0c954b;
+  --link-background: #edf8f2;
+  --grid-border: #e2e2e2;
+  --ff-main: "FiraGo", sans-serif;
+  --ff-code: "Triplicate", monospace;
+  --smcp-forms: "c2sc" 1;
+  --top-ws: 4rem;
+  --vw-constant: 88vw;
+  --rem-constant: 28rem;
+  --line-length: min(var(--vw-constant), var(--rem-constant));
+  /* max 88% of the device's width or 26 rem; whichever kicks in first */
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: var(--ff-main);
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "liga", "kern";
+  -webkit-text-size-adjust: none;
+}
+
+@media (max-width: 320px) {
+  html {
+    font-size: 15px
+  }
+}
+
+@media (max-width: 520px) {
+  html {
+    font-size: 18px
+  }
+}
+
+@media (min-width: 1000px) {
+  html {
+    font-size: 20px
+  }
+}
+
+
+/* ======
+LAYOUT
+====== */
+
+/* DOCUMENT STRUCTURE */
+/* header */
+/* main */
+/* footer */
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.table-of-contents {
+  position: sticky;
+  margin: 0 auto;
+  padding-top: 1.2rem;
+  padding-bottom: 2.2rem;
+  max-width: var(--vw-constant);
+  /* use `max-width` instead of `min(x, y)` so that header doesn't get centered */
+}
+
+.table-of-contents h3 {
+  margin-top: 0;
+  margin-bottom: .9rem;
+  font-family: var(--ff-main);
+  font-weight: 600;
+  font-size: 115%;
+}
+
+.table-of-contents li {
+  font-size: 95%;
+  margin-bottom: .6rem;
+  color: var(--gray-6);
+  font-family: var(--ff-main);
+  font-weight: 200;
+}
+
+.table-of-contents a {
+  color: inherit;
+}
+
+.table-of-contents a:hover {
+  color: black;
+}
+
+.article {
+  margin-bottom: 10vh;
+}
+
+@media (min-width: 520px) {
+  main {
+    padding-bottom: 30vh;
+  }
+}
+
+@media (min-width: 1000px) {
+  main {
+    margin: 0 auto;
+    margin-top: var(--top-ws);
+    width: min(90vw, 54rem);
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    column-gap: 5vw;
+  }
+
+  .table-of-contents {
+    margin: 0;
+    padding: 0;
+    position: sticky;
+    top: var(--top-ws);
+    flex-shrink: 20;
+    align-self: flex-start;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+}
+
+
+/* =====
+CONTENT
+======*/
+
+strong {
+  font-weight: 500;
+}
+
+ul,
+ol,
+li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover,
+a span:hover,
+:target {
+  background: var(--link-background);
+  transition: .2s ease-in-out;
+}
+
+code,
+pre {
+  font-family: var(--ff-code);
+}
+
+address {
+  font-style: inherit;
+}
+
+/* styled globally since article headings and section headings should look identical */
+h1 {
+  margin-top: 0;
+  margin-bottom: 1.2rem;
+  font-weight: 600;
+  line-height: 1.1;
+  font-size: 160%;
+}
+
+@media (min-width: 520px) {
+  h1 {
+    font-size: 200%;
+    margin-bottom: 1.4rem;
+  }
+}
+
+
+/* hyphenation */
+/* doesn't enable hyphenation; only provides the rules for when hyphenation is enabled */
+p,
+li,
+h1,
+h2,
+h3 {
+  -webkit-hyphenate-limit-before: 3;
+  -webkit-hyphenate-limit-after: 3;
+  -webkit-hyphenate-limit-chars: 6 3 3;
+  -webkit-hyphenate-limit-lines: 2;
+  -webkit-hyphenate-limit-last: always;
+  -webkit-hyphenate-limit-zone: 8%;
+  -moz-hyphenate-limit-chars: 6 3 3;
+  -moz-hyphenate-limit-lines: 2;
+  -moz-hyphenate-limit-last: always;
+  -moz-hyphenate-limit-zone: 8%;
+  -ms-hyphenate-limit-chars: 6 3 3;
+  -ms-hyphenate-limit-lines: 2;
+  -ms-hyphenate-limit-last: always;
+  -ms-hyphenate-limit-zone: 8%;
+  hyphenate-limit-chars: 6 3 3;
+  hyphenate-limit-lines: 2;
+  hyphenate-limit-last: always;
+  hyphenate-limit-zone: 8%;
+  /* vendor prefixes kept "as is" for maximum support */
+}
+
+/* don't hyphenate important elements! */
+b,
+i,
+em,
+code,
+cite,
+strong,
+.small-caps,
+.black,
+.medium,
+.no-hyphens,
+.email,
+.heavily-emphasized {
+  -moz-hyphens: none !important;
+  -ms-hyphens: none !important;
+  -webkit-hyphens: none !important;
+  hyphens: none !important;
+}
+
+.manual-hyphens {
+  -moz-hyphens: manual !important;
+  -ms-hyphens: manual !important;
+  -webkit-hyphens: manual !important;
+  hyphens: manual !important;
+}
+
+/* necessary on mobile due to shorter line length */
+@media (max-width: 520px) {
+
+  h1,
+  h2,
+  h3 {
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    /* keep as `auto`, not `manual` with soft hyphens, since browser support is poor */
+  }
+}
