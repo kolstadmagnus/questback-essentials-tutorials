@@ -1,3 +1,16 @@
+/* ============
+concourse index
+============ */
+
+@font-face {
+  font-family: concourse-index;
+  font-style: normal;
+  font-stretch: normal;
+  font-display: auto;
+  src: url("../fonts/concourse-index.woff2");
+}
+
+
 /* roman */
 
 @font-face {

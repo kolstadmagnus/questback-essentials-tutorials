@@ -73,21 +73,21 @@ BASIC BLOCK STYLES
   margin-left: 1.8rem;
 }
 
-.article ul li:before {
+.article ul li::before {
   content: "•";
   position: absolute;
   margin-left: -1.8rem;
   color: var(--gray-2);
 }
 
-.article ol li:before {
+.article ol li::before {
   content: counter(foobar);
   counter-increment: foobar;
   position: absolute;
   margin-left: -2.8rem;
-  margin-top: -.06rem;
+  margin-top: -.1rem;
   font-family: "Concourse-index";
-  font-size: 115%;
+  font-size: 125%;
   font-style: normal;
 }
 
