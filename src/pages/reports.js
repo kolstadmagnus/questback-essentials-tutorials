@@ -4,8 +4,8 @@ import Layout from "../components/layout.js"
 import Seo from "../components/seo.js"
 
 const ReportsPage = ({ data, location }) => {
-  let posts = data.allMdx.nodes
-  const pageTitle = "Reports"
+  let articles = data.allMdx.nodes
+  let pageTitle = "Reports"
 
   return (
     <Layout location={location}>
@@ -13,11 +13,11 @@ const ReportsPage = ({ data, location }) => {
       <section className="article-list">
         <h1 itemProp="headline">{pageTitle}</h1>
         <ul>
-          {posts.map(post => {
-            const title = post.frontmatter.title || post.fields.slug
+          {articles.map(article => {
+            const title = article.frontmatter.title || article.fields.slug
             return (
-              <li key={post.fields.slug} itemProp="post">
-                <Link to={post.fields.slug} itemProp="url">
+              <li key={article.fields.slug} itemProp="article">
+                <Link to={article.fields.slug} itemProp="url">
                   <span itemProp="headline">{title}</span>
                 </Link>
               </li>
@@ -39,7 +39,7 @@ export const pageQuery = graphql`
       }
     }
     allMdx(
-      filter: {fileAbsolutePath: {regex: "/posts/reports/" }}  
+      filter: { frontmatter: { category: { eq: "reports" }}}  
       sort: { fields: [frontmatter___date], order: DESC },
       ) {
       nodes {
@@ -48,6 +48,7 @@ export const pageQuery = graphql`
           slug
         }
         frontmatter {
+          category
           title
         }
       }

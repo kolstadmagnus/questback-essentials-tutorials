@@ -4,7 +4,7 @@ const { createFilePath } = require(`gatsby-source-filesystem`)
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
 
-  const postTemplate = path.resolve(`./src/templates/post-template.js`)
+  const articleTemplate = path.resolve(`./src/templates/article-template.js`)
 
   const result = await graphql(
     `
@@ -31,23 +31,23 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   if (result.errors) {
     reporter.panicOnBuild(
-      `There was an error loading your blog posts`,
+      `There was an error loading your articles`,
       result.errors
     )
     return
   }
 
-  const posts = result.data.allMdx.nodes
+  const articles = result.data.allMdx.nodes
 
-  if (posts.length > 0) {
-    posts.forEach((post, index) => {
+  if (articles.length > 0) {
+    articles.forEach((article, index) => {
       [index + 1].id
 
       createPage({
-        path: post.fields.slug,
-        component: postTemplate,
+        path: article.fields.slug,
+        component: articleTemplate,
         context: {
-          id: post.id
+          id: article.id
         },
       })
     })

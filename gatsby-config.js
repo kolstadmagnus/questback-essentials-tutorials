@@ -64,69 +64,9 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/posts/`,
+        path: `${__dirname}/articles/`,
       }
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/posts/reports/`,
-      }
-    },
-    /* {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/posts/account-settings/`,
-      }
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/posts/designer/`,
-      }
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/posts/distribution/`,
-      }
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/posts/filters/`,
-      }
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/posts/follow-up/`,
-      }
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/posts/languages/`,
-      }
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/posts/notifications/`,
-      }
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/posts/quest-settings/`,
-      }
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/posts/test-and-publish/`,
-      }
-    }, */
     `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-plugin-sharp`,

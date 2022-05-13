@@ -5,7 +5,7 @@ import Seo from "../components/seo.js"
 import { Helmet } from "react-helmet"
 
 const HomePage = ({ data, location }) => {
-  let posts = data.allMdx.nodes
+  let articles = data.allMdx.nodes
   const pageTitle = "Questback Essentials tutorials"
 
   return (
@@ -18,11 +18,11 @@ const HomePage = ({ data, location }) => {
       <section className="article-list">
         <h1 itemProp="headline">{pageTitle}</h1>
         <ul>
-          {posts.map(post => {
-            const title = post.frontmatter.title || post.fields.slug
+          {articles.map(article => {
+            const title = article.frontmatter.title || article.fields.slug
             return (
-              <li key={post.fields.slug} itemProp="post">
-                <Link to={post.fields.slug} itemProp="url">
+              <li key={article.fields.slug} itemProp="article">
+                <Link to={article.fields.slug} itemProp="url">
                   <span itemProp="headline">{title}</span>
                 </Link>
               </li>
@@ -52,9 +52,11 @@ export const pageQuery = graphql`
           slug
         }
         frontmatter {
+          category
           computerDate: date(formatString: "YYYY-MM-DD")
           humanDate: date(formatString: "D. MMMM YYYY", locale: "nb")
           title
+          lead
         }
       }
     }

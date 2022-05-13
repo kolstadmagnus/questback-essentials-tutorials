@@ -2105,7 +2105,7 @@ module.exports = Object.assign;
 /***/ 4999:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-exports.components={"component---src-pages-404-js":()=>__webpack_require__.e(/* import() | component---src-pages-404-js */ 883).then(__webpack_require__.bind(__webpack_require__, 9616)),"component---src-pages-index-js":()=>__webpack_require__.e(/* import() | component---src-pages-index-js */ 678).then(__webpack_require__.bind(__webpack_require__, 7704)),"component---src-pages-reports-js":()=>__webpack_require__.e(/* import() | component---src-pages-reports-js */ 589).then(__webpack_require__.bind(__webpack_require__, 9781)),"component---src-templates-post-template-js":()=>__webpack_require__.e(/* import() | component---src-templates-post-template-js */ 946).then(__webpack_require__.bind(__webpack_require__, 549))};
+exports.components={"component---src-pages-404-js":()=>__webpack_require__.e(/* import() | component---src-pages-404-js */ 883).then(__webpack_require__.bind(__webpack_require__, 9616)),"component---src-pages-index-js":()=>__webpack_require__.e(/* import() | component---src-pages-index-js */ 678).then(__webpack_require__.bind(__webpack_require__, 7704)),"component---src-pages-reports-js":()=>__webpack_require__.e(/* import() | component---src-pages-reports-js */ 589).then(__webpack_require__.bind(__webpack_require__, 9781)),"component---src-templates-article-template-js":()=>__webpack_require__.e(/* import() | component---src-templates-article-template-js */ 782).then(__webpack_require__.bind(__webpack_require__, 5812))};
 
 /***/ }),
 
@@ -5493,7 +5493,7 @@ module.exports = JSON.parse('{"name":"gatsby","description":"Blazing fast modern
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"polyfill":["/polyfill-b227d9031ab4094e5021.js"],"app":["/app-7004d6584b72e49c4e72.js"],"component---src-pages-404-js":["/component---src-pages-404-js-5341bf334643775c7e06.js"],"component---src-pages-index-js":["/component---src-pages-index-js-b7d8e61aa9fa35cf8953.js"],"component---src-pages-reports-js":["/component---src-pages-reports-js-dcc03b3e801b72c39874.js"],"component---src-templates-post-template-js":["/component---src-templates-post-template-js-0970412d000f838faa08.js"]}');
+module.exports = JSON.parse('{"polyfill":["/polyfill-b227d9031ab4094e5021.js"],"app":["/app-2fa0ae122ebb6055cd1b.js"],"component---src-pages-404-js":["/component---src-pages-404-js-5341bf334643775c7e06.js"],"component---src-pages-index-js":["/component---src-pages-index-js-66a1a3d33200298d4e13.js"],"component---src-pages-reports-js":["/component---src-pages-reports-js-024439ec5c36ac9d6700.js"],"component---src-templates-article-template-js":["/component---src-templates-article-template-js-d5c669b0e6c949bdd031.js"]}');
 
 /***/ })
 
@@ -5569,7 +5569,7 @@ module.exports = JSON.parse('{"polyfill":["/polyfill-b227d9031ab4094e5021.js"],"
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames based on template
-/******/ 			return "" + {"589":"component---src-pages-reports-js","678":"component---src-pages-index-js","883":"component---src-pages-404-js","946":"component---src-templates-post-template-js"}[chunkId] + ".js";
+/******/ 			return "" + {"589":"component---src-pages-reports-js","678":"component---src-pages-index-js","782":"component---src-templates-article-template-js","883":"component---src-pages-404-js"}[chunkId] + ".js";
 /******/ 		};
 /******/ 	})();
 /******/ 	

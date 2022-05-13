@@ -1,4 +1,4 @@
-### Type definitions saved at 2022-05-12T18:47:07.493Z ###
+### Type definitions saved at 2022-05-13T20:49:46.950Z ###
 
 type File implements Node @dontInfer {
   sourceInstanceName: String!
@@ -145,6 +145,7 @@ enum GatsbyImagePlaceholder {
 
 type MdxFrontmatter {
   title: String!
+  category: String
   date: Date @dateformat
   lead: String
 }

@@ -55,91 +55,12 @@ html {
   }
 }
 
-
-/* ======
-LAYOUT
-====== */
-
-/* DOCUMENT STRUCTURE */
-/* header */
-/* main */
-/* footer */
-
 body {
   margin: 0;
   padding: 0;
   height: 100%;
 }
 
-.table-of-contents {
-  position: sticky;
-  margin: 0 auto;
-  padding-top: 1.2rem;
-  padding-bottom: 2.2rem;
-  max-width: var(--vw-constant);
-  /* use `max-width` instead of `min(x, y)` so that header doesn't get centered */
-}
-
-.table-of-contents h3 {
-  margin-top: 0;
-  margin-bottom: .9rem;
-  font-family: var(--ff-main);
-  font-weight: 600;
-  font-size: 115%;
-}
-
-.table-of-contents li {
-  font-size: 95%;
-  margin-bottom: .6rem;
-  color: var(--gray-6);
-  font-family: var(--ff-main);
-}
-
-.table-of-contents a {
-  color: inherit;
-}
-
-.table-of-contents a:hover {
-  color: black;
-}
-
-.article {
-  margin-bottom: 10vh;
-}
-
-@media (min-width: 520px) {
-  main {
-    padding-bottom: 30vh;
-  }
-}
-
-@media (min-width: 1000px) {
-  main {
-    margin: 0 auto;
-    margin-top: var(--top-ws);
-    width: min(90vw, 54rem);
-    display: flex;
-    justify-content: center;
-    flex-grow: 1;
-    column-gap: 5vw;
-  }
-
-  .table-of-contents {
-    margin: 0;
-    padding: 0;
-    position: sticky;
-    top: var(--top-ws);
-    flex-shrink: 20;
-    align-self: flex-start;
-    overflow-x: hidden;
-    overflow-y: auto;
-  }
-}
-
-
-/* =====
-CONTENT
-======*/
 
 strong {
   font-weight: 500;
@@ -174,30 +95,13 @@ address {
   font-style: inherit;
 }
 
-/* styled globally since article headings and section headings should look identical */
-h1 {
-  margin-top: 0;
-  margin-bottom: 1.2rem;
-  font-weight: 600;
-  line-height: 1.1;
-  font-size: 160%;
-}
-
-@media (min-width: 520px) {
-  h1 {
-    font-size: 200%;
-    margin-bottom: 1.4rem;
-  }
-}
-
 
 /* hyphenation */
 /* doesn't enable hyphenation; only provides the rules for when hyphenation is enabled */
 p,
 li,
 h1,
-h2,
-h3 {
+h2 {
   -webkit-hyphenate-limit-before: 3;
   -webkit-hyphenate-limit-after: 3;
   -webkit-hyphenate-limit-chars: 6 3 3;
@@ -249,8 +153,7 @@ strong,
 @media (max-width: 520px) {
 
   h1,
-  h2,
-  h3 {
+  h2 {
     -webkit-hyphens: auto;
     -moz-hyphens: auto;
     -ms-hyphens: auto;

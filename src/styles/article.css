@@ -1,15 +1,67 @@
-.article {
-  width: var(--line-length);
+.article,
+.table-of-contents {
   margin: 0 auto;
+  width: var(--line-length);
+}
+
+.article {
+  margin-bottom: 10vh;
   counter-reset: subheading;
 }
 
-@media (min-width: 765px) {
-  .article {
+.table-of-contents {
+  position: sticky;
+  margin: 0 auto;
+  padding-top: 1.2rem;
+  padding-bottom: 2.2rem;
+  max-width: var(--vw-constant);
+}
+
+.table-of-contents h3 {
+  margin-top: 0;
+  margin-bottom: .9rem;
+  font-family: var(--ff-main);
+  font-weight: 600;
+  font-size: 115%;
+}
+
+.table-of-contents li {
+  font-size: 95%;
+  margin-bottom: .6rem;
+  color: var(--gray-6);
+}
+
+.table-of-contents a {
+  color: inherit;
+}
+
+@media (min-width: 1000px) {
+  .article-page {
     margin: 0 auto;
-    max-width: var(--rem-constant);
+    width: min(90vw, 58rem);
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    column-gap: 5vw;
+  }
+
+  .article {
+    margin-top: var(--top-ws);
+  }
+
+  .table-of-contents {
+    margin: 0;
+    padding: 0;
+    position: sticky;
+    top: var(--top-ws);
+    flex-shrink: 20;
+    align-self: flex-start;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 29%; /* prevent active link from increasing the size of the div  */
   }
 }
+
 
 /* MDX images */
 .article .gatsby-resp-image-wrapper {
@@ -41,8 +93,8 @@ BASIC BLOCK STYLES
 .article p,
 .article li {
   margin-top: 0;
-  margin-bottom: .9rem;
-  line-height: 1.5;
+  margin-bottom: 1rem;
+  line-height: 1.52;
   font-size: 1rem;
   font-variant-numeric: proportional-nums;
 }
@@ -106,13 +158,13 @@ BASIC BLOCK STYLES
 /* tutorials */
 
 .article .tutorial {
-  border-top: 1px solid #d0cfcf;
-  border-bottom: 1px solid #d0cfcf;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
   padding-top: .4rem;
   padding-bottom: .4rem;
-  padding-left: 1.2rem;
-  padding-right: 1.2rem;
-  background-color: #fdfdfd
+  padding-left: 1.4rem;
+  padding-right: 1.4rem;
+  background-color: #fbfbfb
 }
 
 .article .tutorial {
@@ -121,8 +173,10 @@ BASIC BLOCK STYLES
 }
 
 .article .tutorial h3 {
-  margin-top: .9rem;
-  margin-bottom: .7rem;
+  margin-top: 1.1rem;
+  margin-bottom: .8rem;
+  font-size: 98%;
+  font-weight: 600;
 }
 
 .article .tutorial p,
@@ -173,6 +227,7 @@ CHARACTER STYLES
 
 .article a {
   color: var(--link-text);
+  font-weight: 300;
 }
 
 .article code {
@@ -206,13 +261,22 @@ CHARACTER STYLES
 headings & intro
 ============= */
 
-.article .published-date {
+
+/* article title */
+h1 {
   margin-top: 0;
-  margin-bottom: .26rem;
-  font-size: 80%;
-  color: var(--gray-3);
+  margin-bottom: 1.2rem;
+  font-weight: 600;
+  line-height: 1.1;
+  font-size: 160%;
 }
 
+@media (min-width: 520px) {
+  h1 {
+    font-size: 210%;
+    margin-bottom: 1.4rem;
+  }
+}
 
 /* intro */
 .article .lead {
@@ -221,20 +285,19 @@ headings & intro
   font-size: 115%;
 }
 
-
 /* regular subheading */
 .article h2 {
   padding-top: 1.6rem;
   margin-top: .4rem;
   margin-bottom: .8rem;
   line-height: 1.36;
-  font-size: 120%;
+  font-size: 125%;
   font-weight: 600;
 }
 
 @media (min-width: 520px) {
   .article h2 {
-    font-size: 140%;
+    font-size: 145%;
     padding-top: var(--top-ws);
     margin-bottom: 1.2rem;
   }
@@ -247,22 +310,11 @@ headings & intro
   margin-top: 2rem;
 }
 
-.article h2::before {
+/* .article h2::before {
   counter-increment: subheading;
-  content: counter(subheading) "\00A0\00A0\00A0";
-}
+  content: counter(subheading) ".\00A0\00A0";
+} */
 
 .article h2:target {
   background: none;
-}
-
-.article h3 {
-  margin-top: 2rem;
-  margin-bottom: .6rem;
-  font-size: 100%;
-  font-weight: 600;
-  font-variant: small-caps;
-  text-transform: lowercase;
-  font-feature-settings: var(--smcp-forms);
-  letter-spacing: .06em;
 }
